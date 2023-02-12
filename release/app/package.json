@@ -1,0 +1,20 @@
+{
+  "name": "sleize",
+  "version": "0.1.0",
+  "description": "Sleize is the note taking app for students",
+  "main": "./dist/main/main.js",
+  "author": {
+    "name": "Afonso Cachim"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts",
+    "postinstall": "npm run electron-rebuild && npm run link-modules"
+  },
+  "dependencies": {
+    "leveldown": "^6.1.0",
+    "pouchdb-adapter-leveldb": "^7.2.2",
+    "puppeteer": "^13.3.2"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+export type DialogTypes =
+  | "NONE"
+  | "PDF_SEARCH"
+  | "HOTKEY_HELPER"
+  | "SLATE_SEARCH"
+  | "NOTE_SEARCH"
+  | "SOURCE_TREE"
+  | "SOURCE_SEARCH"
+  | "ADD_ARTICLE"
+  | "ADD_ONLINE_VIDEO"
+  | "SOURCE_NOT_FOUND";

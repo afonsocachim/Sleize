@@ -1,0 +1,22 @@
+import { optimizeClientRects } from "./optimizeClientRects";
+
+export const getClientRects = (
+  range: Range,
+  containerEl: HTMLElement,
+  shouldOptimize = true
+) => {
+  const clientRects = Array.from(range.getClientRects());
+
+  const offset = containerEl.getBoundingClientRect();
+
+  const rects = clientRects.map((rect) => {
+    return {
+      top: rect.top + containerEl.scrollTop - offset.top,
+      left: rect.left + containerEl.scrollLeft - offset.left,
+      width: rect.width,
+      height: rect.height,
+    };
+  });
+
+  return shouldOptimize ? optimizeClientRects(rects) : rects;
+};
