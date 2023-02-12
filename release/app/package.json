@@ -1,6 +1,6 @@
 {
   "name": "sleize",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Sleize is the note taking app for students",
   "main": "./dist/main/main.js",
   "author": {
